@@ -1,57 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #ffffff;
     font-family: "Roboto", sans-serif;
     color: #434455;
-
 }
-.container{
+
+.container {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-li{
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-img{
-    display:block;
+
+img {
+    display: block;
 }
-.header{
-    border-bottom: 1px solid #e7e9fc
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
-.header .container{
+
+.header .container {
     width: 1158px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-.header-nav{
+
+.header-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-list{
+.nav-list {
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 40px;
 }
-.nav-link{
+
+.nav-link {
     display: block;
     padding: 24px 0;
 }
-.address-list{
+
+.address-list {
     padding: 0;
     margin-left: 332px;
     display: flex;
@@ -59,20 +69,19 @@ img{
     justify-content: space-between;
     gap: 40px;
 }
-.footer .container{
-    padding: 100px 1020px 100px 156px;
-}
-.logo{
+
+.logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 117%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color:#4d5ae5 ;
-    margin-right: 76px
+    color: #4d5ae5;
+    margin-right: 76px;
 }
-.logo-web{
+
+.logo-web {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -81,6 +90,7 @@ img{
     text-transform: uppercase;
     color: #2e2f42;
 }
+
 .footer-logo-web {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -91,40 +101,68 @@ img{
     color: #f4f4fd;
 }
 
-.nav-link{
+.nav-link {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.nav-link.corrent {
+    position: relative;
+}
+
+.nav-link.corrent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+}
+
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.address-email:focus,
+.address-email:hover,
+.nav-link.corrent {
     color: #404bbf;
 }
 
-address{
+address {
     font-style: normal;
 }
-.address-email{
+
+.address-email {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
-    color:#434455;
+    color: #434455;
 }
 
-.address-email:focus,
-.address-email:hover{
-    color: #404bbf;
-}
-
-.section-f{
-    background: #2e2f42;
+.section-f {
+    background: linear-gradient(to bottom,
+            rgba(46,
+                47,
+                66,
+                0.7),
+            rgba(46,
+                47,
+                66,
+                0.7)), url(../images/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     padding: 188px 0;
 }
-.main-hf{
+
+.main-hf {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 56px;
@@ -137,9 +175,10 @@ address{
     margin-right: auto;
     margin-bottom: 48px;
 }
-.main-button{
+
+.main-button {
     background: #4d5ae5;
-    font-family:  "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -148,42 +187,59 @@ address{
     cursor: pointer;
 }
 
-.main-button{
+.main-button {
     display: block;
     min-width: 169px;
     height: 56px;
     border: none;
     border-radius: 4px;
-    margin:  0 auto;
+    margin: 0 auto;
 }
+
 .main-button:focus,
-.main-button:hover{
+.main-button:hover {
     background: #404bbf;
 }
 
-.section-t{
+.section-t {
     padding: 120px 0;
 }
+
 .section-t-hth {
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
     letter-spacing: 0.02em;
-    color:#2e2f42;
+    color: #2e2f42;
     margin-bottom: 8px;
 }
 
-.section-t-ul{
+.section-t-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 24px;
 }
-.section-t-li{
-    width: calc((100% - 3 * 24px) / 4);
 
+.section-t-li {
+    width: calc((100% - 3 * 24px) / 4);
 }
-.section-t-p{
+
+.section-t-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    margin-bottom: 8px;
+}
+
+.section-t-icon {
+}
+.section-t-p {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -191,11 +247,12 @@ address{
     color: #434455;
 }
 
-.section-th{
+.section-th {
     background-color: #f4f4fd;
     padding: 120px 0;
 }
-.section-th-ht{
+
+.section-th-ht {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 36px;
@@ -207,24 +264,31 @@ address{
     margin-right: auto;
     margin-bottom: 72px;
 }
-.section-th-ul{
+
+.section-th-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 24px;
 }
-.section-th-li{
+
+.section-th-li {
     border-radius: 0 0 4px 4px;
 }
-.section-th-img{
+
+.section-th-img {
     width: 264px;
     height: 260px;
+}
 
+.section-th-div {
+    padding-top: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 8px;
 }
-.section-th-div{
-    padding: 32px 0; 
-}
-.section-th-hth{
+
+.section-th-hth {
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
@@ -233,7 +297,8 @@ address{
     color: #2e2f42;
     margin-bottom: 8px;
 }
-.section-th-p{
+
+.section-th-p {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -242,15 +307,37 @@ address{
     color: #434455;
 }
 
-.section-t-li,
-.section-th-li,
-.section-fr-li{
-    background-color: #FFFFFF;
+.section-th-ul-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-.section-fr{
+.icon-conatainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+}
+
+.section-th-icon {
+    fill:#ffffff;
+}
+
+.section-t-li,
+.section-th-li,
+.section-fr-li {
+    background-color: #ffffff;
+}
+
+.section-fr {
     padding: 120px 0;
 }
+
 .section-fr-ht {
     text-transform: capitalize;
     font-weight: 700;
@@ -262,7 +349,7 @@ address{
     margin-bottom: 72px;
 }
 
-.section-fr-ul{
+.section-fr-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -270,23 +357,25 @@ address{
     row-gap: 48px;
     flex-wrap: wrap;
 }
-.section-fr-li{
+
+.section-fr-li {
     width: calc((100% - 2 * 24px) / 3);
 }
 
-.section-fr-div{
-    padding: 32px 16px; 
+.section-fr-div {
+    padding: 32px 16px;
     border-bottom: 1px solid #e7e9fc;
-    border-left: 1px solid #e7e9fc; 
+    border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
     border-top: none;
 }
+
 .section-fr-hth {
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
     letter-spacing: 0.02em;
-    color:#2e2f42;
+    color: #2e2f42;
     text-align: start;
     margin-bottom: 8px;
 }
@@ -296,8 +385,9 @@ address{
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
-    color:#434455;
+    color: #434455;
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -311,21 +401,23 @@ address{
     overflow: hidden;
 }
 
-.footer{
+.footer {
     background-color: #2e2f42;
     padding: 100px 0;
 }
-.footer .container{
+
+.footer .container {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-.footer-logo{
+.footer-logo {
     display: inline-block;
     margin-bottom: 16px;
 }
-.footer-text{
+
+.footer-text {
     width: 264px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
